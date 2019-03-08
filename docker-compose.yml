@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+  rallets:
+    image: rallets/rallets:1.2
+    environment:
+      ACCESS_TOKEN: Ml7a00cKOams1Xlw1h3dV0_3K2iPpyLC
+      CONNECT_AREA: LHR
+      BYPASS: baidu.com
+  spider:
+    image: registry.cn-hangzhou.aliyuncs.com/rallets/spider
+    command: sh
+    tty: true
+    links:
+      - rallets
+    environment:
+      http_proxy: http://rallets:8118
+      https_proxy: http://rallets:8118
+    volumes:
+      - ./spider:/usr/src/spider
