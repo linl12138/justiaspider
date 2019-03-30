@@ -1,4 +1,4 @@
-Spider with Rallets
+Spider
 ====
 
 Scrapy & Python3 along with rallets.com
