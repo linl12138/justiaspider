@@ -1,7 +1,7 @@
 Spider
 ====
 
-Scrapy & Python3 along with rallets.com
+Scrapy & Python3
 
 ### Start
 
