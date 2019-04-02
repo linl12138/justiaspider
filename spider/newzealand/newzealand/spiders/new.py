@@ -21,8 +21,8 @@ class NewSpider(scrapy.Spider):
         for table in tables:
             table = Selector(text = table)
             item['country'] = "New Zealand"
-            item['case_num'] = table.xpath('//tr/td/p/text()').extract_first()
-            item['case_name'] = table.xpath('//tbody/tr/td/p/text()').extract_first()
+            item['case_num'] = table.xpath('//tr/td/text()').extract_first()
+            item['case_name'] = table.xpath('//tbody/tr/td/text()').extract_first()
             item['summary'] = table.xpath('//tbody/tr/td/p/text()').extract()[1]
             yield item
 
